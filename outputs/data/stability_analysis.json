@@ -1,0 +1,16 @@
+{
+  "omega": 1.0,
+  "dt": 0.2,
+  "continuous_eigenvalues": [
+    "1j",
+    "-1j"
+  ],
+  "euler_amplification_modulus": 1.019803902718557,
+  "rk4_amplification_modulus": 0.99999955777768,
+  "symplectic_euler_eigenvalue_moduli": [
+    1.0,
+    1.0
+  ],
+  "rk4_imaginary_axis_threshold_omega_dt": 2.8284271247461903,
+  "symplectic_euler_threshold_omega_dt": 2.0
+}

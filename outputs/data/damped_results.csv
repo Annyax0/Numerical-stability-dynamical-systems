@@ -1,0 +1,3 @@
+experiment,method,dt,t_final,final_error,max_error,rms_error,conservation_error,runtime_s_median,nfev,n_steps
+damped,euler,0.1,30.0,0.07975365924188649,0.19914256561358276,0.1442099872899382,,,300,300
+damped,rk4,0.1,30.0,6.250528415020725e-07,2.6481067311520543e-06,1.7324098533840788e-06,,,1200,300

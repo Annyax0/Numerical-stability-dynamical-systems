@@ -1,0 +1,320 @@
+{
+  "project": "Numerical Stability & Error Analysis in Dynamical Systems",
+  "units": "dimensionless; two-level system uses hbar=1",
+  "timing_warning": "Median wall times depend on hardware, load, and Python version",
+  "runs": [
+    {
+      "experiment": "harmonic",
+      "dt": 0.1,
+      "t_end": 30.0,
+      "figures": [
+        "outputs/figures/harmonic_position.png",
+        "outputs/figures/harmonic_error.png",
+        "outputs/figures/harmonic_energy.png",
+        "outputs/figures/harmonic_phase_space.png",
+        "outputs/figures/harmonic_long_time_energy_drift.png"
+      ],
+      "data": "outputs/data/harmonic_results.csv",
+      "metrics": [
+        {
+          "experiment": "harmonic",
+          "method": "euler",
+          "dt": 0.1,
+          "t_final": 30.0,
+          "final_error": 3.4547850971734286,
+          "max_error": 3.4547850971734286,
+          "rms_error": 1.6415438940870664,
+          "conservation_error": 18.788466261924366,
+          "runtime_s_median": null,
+          "nfev": 300,
+          "n_steps": 300
+        },
+        {
+          "experiment": "harmonic",
+          "method": "rk4",
+          "dt": 0.1,
+          "t_final": 30.0,
+          "final_error": 2.4997494092846445e-05,
+          "max_error": 2.4997494092846445e-05,
+          "rms_error": 1.4444335599718116e-05,
+          "conservation_error": 4.16144970172283e-06,
+          "runtime_s_median": null,
+          "nfev": 1200,
+          "n_steps": 300
+        },
+        {
+          "experiment": "harmonic",
+          "method": "symplectic_euler",
+          "dt": 0.1,
+          "t_final": 30.0,
+          "final_error": 0.06171968980917599,
+          "max_error": 0.062481121800238244,
+          "rms_error": 0.040386675565383744,
+          "conservation_error": 0.05262405964739503,
+          "runtime_s_median": null,
+          "nfev": 300,
+          "n_steps": 300
+        },
+        {
+          "experiment": "harmonic",
+          "method": "velocity_verlet",
+          "dt": 0.1,
+          "t_final": 30.0,
+          "final_error": 0.012770015427579875,
+          "max_error": 0.012770015427579875,
+          "rms_error": 0.007266749545673976,
+          "conservation_error": 0.002499855603586565,
+          "runtime_s_median": null,
+          "nfev": 600,
+          "n_steps": 300
+        }
+      ]
+    },
+    {
+      "experiment": "damped",
+      "dt": 0.1,
+      "t_end": 30.0,
+      "figures": [
+        "outputs/figures/damped_comparison.png"
+      ],
+      "data": "outputs/data/damped_results.csv",
+      "metrics": [
+        {
+          "experiment": "damped",
+          "method": "euler",
+          "dt": 0.1,
+          "t_final": 30.0,
+          "final_error": 0.07975365924188649,
+          "max_error": 0.19914256561358276,
+          "rms_error": 0.1442099872899382,
+          "conservation_error": null,
+          "runtime_s_median": null,
+          "nfev": 300,
+          "n_steps": 300
+        },
+        {
+          "experiment": "damped",
+          "method": "rk4",
+          "dt": 0.1,
+          "t_final": 30.0,
+          "final_error": 6.250528415020725e-07,
+          "max_error": 2.6481067311520543e-06,
+          "rms_error": 1.7324098533840788e-06,
+          "conservation_error": null,
+          "runtime_s_median": null,
+          "nfev": 1200,
+          "n_steps": 300
+        }
+      ]
+    },
+    {
+      "experiment": "quantum",
+      "dt": 0.1,
+      "t_end": 25.0,
+      "figures": [
+        "outputs/figures/quantum_populations.png",
+        "outputs/figures/quantum_probability_drift.png"
+      ],
+      "data": "outputs/data/quantum_results.csv",
+      "metrics": [
+        {
+          "experiment": "quantum",
+          "method": "euler",
+          "dt": 0.1,
+          "t_final": 25.0,
+          "final_error": 1.5156080225228763,
+          "max_error": 1.5156080225228763,
+          "rms_error": 0.7774794948779824,
+          "conservation_error": 5.316647334493356,
+          "runtime_s_median": null,
+          "nfev": 250,
+          "n_steps": 250
+        },
+        {
+          "experiment": "quantum",
+          "method": "rk4",
+          "dt": 0.1,
+          "t_final": 25.0,
+          "final_error": 9.81309555086059e-06,
+          "max_error": 9.81309555086059e-06,
+          "rms_error": 5.671256617129931e-06,
+          "conservation_error": 1.4057252923915797e-06,
+          "runtime_s_median": null,
+          "nfev": 1000,
+          "n_steps": 250
+        }
+      ]
+    },
+    {
+      "experiment": "crossing",
+      "dt": 0.1,
+      "t_end": 12.0,
+      "figures": [
+        "outputs/figures/crossing_population_and_error.png",
+        "outputs/figures/crossing_energy_levels.png"
+      ],
+      "data": "outputs/data/crossing_results.csv",
+      "metrics": [
+        {
+          "experiment": "crossing",
+          "method": "euler",
+          "dt": 0.1,
+          "t_final": 12.0,
+          "final_error": 6.732574685158283,
+          "max_error": 6.732574685158283,
+          "rms_error": 2.4773930980735863,
+          "conservation_error": 57.97506968556641,
+          "runtime_s_median": null,
+          "nfev": 120,
+          "n_steps": 120
+        },
+        {
+          "experiment": "crossing",
+          "method": "rk4",
+          "dt": 0.1,
+          "t_final": 12.0,
+          "final_error": 0.00048276515590944536,
+          "max_error": 0.00048276515590944536,
+          "rms_error": 0.00025602313069965197,
+          "conservation_error": 0.00021666786944840588,
+          "runtime_s_median": null,
+          "nfev": 480,
+          "n_steps": 120
+        }
+      ]
+    },
+    {
+      "experiment": "convergence",
+      "time_horizon": 11.0,
+      "dt_values": [
+        0.4,
+        0.2,
+        0.1,
+        0.05,
+        0.025,
+        0.0125
+      ],
+      "timing_repeats": 3,
+      "data": "outputs/data/convergence_results.csv",
+      "slope_data": "outputs/data/convergence_slopes.csv",
+      "figures": [
+        "outputs/figures/convergence_order.png",
+        "outputs/figures/stability_regimes.png"
+      ],
+      "slopes": [
+        {
+          "experiment": "damped",
+          "method": "euler",
+          "slope": 1.1054959262968291,
+          "r_squared": 0.9989075522980253,
+          "fit_dts": [
+            0.0125,
+            0.025,
+            0.05,
+            0.1
+          ]
+        },
+        {
+          "experiment": "damped",
+          "method": "rk4",
+          "slope": 4.004177241087944,
+          "r_squared": 0.9999999050058875,
+          "fit_dts": [
+            0.0125,
+            0.025,
+            0.05,
+            0.1
+          ]
+        },
+        {
+          "experiment": "harmonic",
+          "method": "euler",
+          "slope": 1.117815878395946,
+          "r_squared": 0.9989940516933681,
+          "fit_dts": [
+            0.0125,
+            0.025,
+            0.05,
+            0.1
+          ]
+        },
+        {
+          "experiment": "harmonic",
+          "method": "rk4",
+          "slope": 3.9999548903964457,
+          "r_squared": 0.9999999999656877,
+          "fit_dts": [
+            0.0125,
+            0.025,
+            0.05,
+            0.1
+          ]
+        },
+        {
+          "experiment": "harmonic",
+          "method": "symplectic_euler",
+          "slope": 1.0368876329528591,
+          "r_squared": 0.999894759794033,
+          "fit_dts": [
+            0.0125,
+            0.025,
+            0.05,
+            0.1
+          ]
+        },
+        {
+          "experiment": "harmonic",
+          "method": "velocity_verlet",
+          "slope": 2.000755958934244,
+          "r_squared": 0.9999999616551827,
+          "fit_dts": [
+            0.0125,
+            0.025,
+            0.05,
+            0.1
+          ]
+        },
+        {
+          "experiment": "quantum",
+          "method": "euler",
+          "slope": 1.0862334820350976,
+          "r_squared": 0.9994370159616707,
+          "fit_dts": [
+            0.0125,
+            0.025,
+            0.05,
+            0.1
+          ]
+        },
+        {
+          "experiment": "quantum",
+          "method": "rk4",
+          "slope": 3.9999667776714314,
+          "r_squared": 0.9999999999811725,
+          "fit_dts": [
+            0.0125,
+            0.025,
+            0.05,
+            0.1
+          ]
+        }
+      ],
+      "stability": {
+        "omega": 1.0,
+        "dt": 0.2,
+        "continuous_eigenvalues": [
+          "1j",
+          "-1j"
+        ],
+        "euler_amplification_modulus": 1.019803902718557,
+        "rk4_amplification_modulus": 0.99999955777768,
+        "symplectic_euler_eigenvalue_moduli": [
+          1.0,
+          1.0
+        ],
+        "rk4_imaginary_axis_threshold_omega_dt": 2.8284271247461903,
+        "symplectic_euler_threshold_omega_dt": 2.0
+      }
+    }
+  ]
+}
