@@ -143,10 +143,10 @@ $$
 We use $\Delta=1,\ V=0.7,\ \psi(0)=(1,0)^T$. The populations are $P_i=|\psi_i|^2$, with total probability $P_1+P_2=1$ for exact Hermitian evolution. Since $H$ is constant and Hermitian, the exact reference is
 
 $$
-\psi(t)=Q\operatorname{diag}(e^{-\mathrm iE_1t},e^{-\mathrm iE_2t})Q^\dagger\psi(0),
+\psi(t)=Q\mathrm{diag}(e^{-\mathrm iE_1t},e^{-\mathrm iE_2t})Q^\dagger\psi(0),
 $$
 
-where $H=Q\operatorname{diag}(E_1,E_2)Q^\dagger$. The spectral formula is independently checked against `scipy.linalg.expm` in tests. Euler and RK4 are applied to the **complex-valued** Schrödinger equation, and norm drift is explicitly measured. This is a transparent two-level coherent population-transfer model, **not** a fewest-switches surface-hopping (FSSH) simulation.
+where $H=Q\mathrm{diag}(E_1,E_2)Q^\dagger$. The spectral formula is independently checked against `scipy.linalg.expm` in tests. Euler and RK4 are applied to the **complex-valued** Schrödinger equation, and norm drift is explicitly measured. This is a transparent two-level coherent population-transfer model, **not** a fewest-switches surface-hopping (FSSH) simulation.
 
 ### D. Optional avoided-crossing extension
 
