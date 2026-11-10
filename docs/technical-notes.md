@@ -52,7 +52,7 @@ $$
 
 For autonomous separable Hamiltonians it is a second-order symplectic method. It is *not* used for the damped equation, where velocity-dependent friction violates the stated separability assumption.
 
-Implementation: [`src/numerical_dynamics/integrators.py`](src/numerical_dynamics/integrators.py). Every integrator checks time and state inputs, uses `float64`/`complex128` state arrays, returns the full time grid plus solver function-evaluation count, and throws an error for nonfinite states or derivatives. The geometric methods use canonical **momentum** $p=mv$, converted to **velocity** only for plots and comparisons.
+Implementation: [`src/numerical_dynamics/integrators.py`](../src/numerical_dynamics/integrators.py). Every integrator checks time and state inputs, uses `float64`/`complex128` state arrays, returns the full time grid plus solver function-evaluation count, and throws an error for nonfinite states or derivatives. The geometric methods use canonical **momentum** $p=mv$, converted to **velocity** only for plots and comparisons.
 
 ## Physical systems and their reference solutions
 
@@ -111,7 +111,7 @@ $$
 
 This reproduces a minimal avoided-crossing Hamiltonian: its instantaneous eigenenergies are $\pm\sqrt{(at)^2+V^2}$, separated by a minimum gap $2|V|$. We propagate from $t=-6$ to $6$ and compare the custom Euler/RK4 solutions against an **independent high-accuracy SciPy DOP853 result** (`rtol=1e-11`, `atol=1e-13`). Unlike the constant-H experiment, this is a **numerical reference**, not an exact analytical solution. No nuclear coordinates, forces on multiple surfaces, stochastic hops, or FSSH trajectories are simulated.
 
-![Avoided crossing](outputs/figures/crossing_population_and_error.png)
+![Avoided crossing](../outputs/figures/crossing_population_and_error.png)
 
 ## Quantitative convergence and diagnostics
 
