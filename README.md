@@ -47,7 +47,7 @@ python -m pytest -q
 python -m numerical_dynamics.cli --experiment all
 ```
 
-Generated figures and tables are written under `outputs/figures/` and `outputs/data/`. Example outputs are committed for review without running the code. An optional exploration notebook is at [notebooks/numerical_methods_exploration.ipynb](notebooks/numerical_methods_exploration.ipynb).
+Generated figures and tables are written under `outputs/figures/` and `outputs/data/`. Example outputs are committed for review without running the code. An optional exploration notebook is at [notebooks/numerical_methods_exploration.ipynb](notebooks/numerical_methods_exploration.ipynb). To use it, install the additional dependencies with `python -m pip install -e '.[notebook]'`.
 
 Run a smaller experiment with `python -m numerical_dynamics.cli --experiment harmonic --dt 0.05`, or use `--experiment quantum`, `damped`, `crossing`, or `convergence`. Use `--help` for additional options.
 
